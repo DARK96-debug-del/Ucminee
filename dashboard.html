@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome, {{ user[1] }}</h2>
+    <p>Balance: {{ user[3] }} XV</p>
+    <p>Energy: {{ user[4] }}</p>
+    <p>Last Click: {{ user[5] }}</p>
+    
+    <button onclick="window.location.href='/click'">Click to earn XV Coin</button>
+    
+    <br>
+    <a href="/missions">Missions</a>
+    <a href="/ref">Referral</a>
+    <a href="/withdraw">Withdraw</a>
+</body>
+</html>
