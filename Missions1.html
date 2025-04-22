@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missions</title>
+</head>
+<body>
+    <h2>Admin: Manage Missions</h2>
+    <h3>Current Missions:</h3>
+    <ul>
+        {% for mission in missions %}
+            <li>{{ mission[1] }} - Reward: {{ mission[2] }} XV</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Add New Mission:</h3>
+    <form action="/missions" method="POST">
+        <label for="mission_name">Mission Name</label>
+        <input type="text" name="mission_name" required>
+        <br>
+        <label for="reward">Reward (in XV)</label>
+        <input type="number" name="reward" required>
+        <br>
+        <button type="submit">Add Mission</button>
+    </form>
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
