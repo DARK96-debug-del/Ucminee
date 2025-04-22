@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Referrals</title>
+</head>
+<body>
+    <h2>Your Referrals</h2>
+    <ul>
+        {% for referrer in referrers %}
+            <li>Referred by: {{ referrer[1] }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>
